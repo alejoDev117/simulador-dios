@@ -81,19 +81,15 @@ El proyecto utiliza el ecosistema de empaquetado de Python:
 
 ### Construir el Proyecto
 
-1. **Activar el entorno virtual**:
-   ```bash
-   source venv-rust/bin/activate
-   ```
 
-2. **Construir la extensión Rust**:
+1. **Construir la extensión Rust**:
    ```bash
    cd rust_core
    maturin develop
    cd..
    ```
 
-3. **Construir wheels para distribución**:
+2. **Construir wheels para distribución**:
    ```bash
    python venv-rust/python_app/main.py
    ```
