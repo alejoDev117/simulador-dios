@@ -91,7 +91,7 @@ El proyecto utiliza el ecosistema de empaquetado de Python:
    ```bash
    cd rust_core
    maturin develop
-   cd..
+   cd ..
    ```
 
 3. **Construir wheels para distribución**:
