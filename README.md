@@ -58,6 +58,31 @@ El proyecto utiliza el ecosistema de empaquetado de Python:
 
 ## Flujo de Desarrollo
 
+## Instalación
+
+
+1. **Activar el entorno virtual**:
+   ```bash
+   python3 -m venv venv-rust
+   source venv-rust/bin/activate
+   ```
+
+2. **Instalar maturin**:
+   ```bash
+   pip install maturin
+   ```
+3. **Compilar e instalar el modulo Rust**:
+   ```bash
+   cd rust_core
+   maturin develop
+   cd ..
+   ```
+4. **Compilar e instalar el modulo Rust**:
+   ```bash
+   python venv-rust/python_app/main.py
+   ```
+
+
 ### Construir el Proyecto
 
 1. **Activar el entorno virtual**:
@@ -69,34 +94,16 @@ El proyecto utiliza el ecosistema de empaquetado de Python:
    ```bash
    cd rust_core
    maturin develop
+   cd..
    ```
 
 3. **Construir wheels para distribución**:
    ```bash
-   maturin build --release
+   python venv-rust/python_app/main.py
    ```
 
-### Modo Desarrollo
-Para ciclos de desarrollo rápidos:
-```bash
-maturin develop
-```
-Esto construye e instala la extensión directamente en el entorno virtual.
 
 
-## Instalación
-
-
-1. **Activar el entorno virtual**:
-   ```bash
-   source venv-rust/bin/activate
-   ```
-
-2. **Instalar en modo desarrollo**:
-   ```bash
-   cd rust_core
-   maturin develop
-   ```
 ## Uso
 
 Una vez instalado, puedes usar el simulador desde Python:
