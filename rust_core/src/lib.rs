@@ -1,14 +1,14 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
+use pyo3::prelude::*;
+
+
+#[pyfunction]
+fn imprimir_mensajes() -> PyResult<()> {
+    println!("✅ Hola desde Rust");
+    Ok(())
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+#[pymodule]
+fn rust_core(_py: Python, m: &PyModule) -> PyResult<()> {
+    m.add_function(wrap_pyfunction!(imprimir_mensajes, m)?)?;
+    Ok(())
 }
