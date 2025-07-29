@@ -67,17 +67,13 @@ El proyecto utiliza el ecosistema de empaquetado de Python:
    source venv-rust/bin/activate
    ```
 
-2. **Instalar maturin**:
-   ```bash
-   pip install maturin
-   ```
-3. **Compilar e instalar el modulo Rust**:
+2. **Compilar e instalar el modulo Rust**:
    ```bash
    cd rust_core
    maturin develop
    cd ..
    ```
-4. **Compilar e instalar el modulo Rust**:
+3. **Compilar e instalar el modulo Rust**:
    ```bash
    python venv-rust/python_app/main.py
    ```
